@@ -1,5 +1,5 @@
+**********Java Language Basics - Practice Exercise 2***********
 
-------------------------------------------------------------------------------------------------------------------------
 5. Write a boolean method called isEven() in a class called EvenNumTest, which takes
 an int as input and returns true if the input is even. The signature of the method is as
 follows: public static boolean isEven(int number)
@@ -16,8 +16,11 @@ Enter the grade for student 3: 98
 Enter the grade for student 4: 77
 
 The average is 81.50
+
 The minimum is 65
+
 The maximum is 98
+
 ------------------------------------------------------------------------------------------------------------------------
 7. Write a program to list all the factorials, that can be expressed as an int (i.e., 32-bit
 signed integer). Your output shall look like:
@@ -44,12 +47,21 @@ read content of this file using byte array
 9. Write a program to calculate the frequency of the words in a given file,
 
 Example: Create a file named FileDemo.txt with the following content
+
 i am a man ,
+
 i like to sleep ,
+
 i have a home.
+
 Output: i->3 times,
+
 am-1,
+
 like -1,
+
 have -1,
-a-2 etc.,
+
+a - 2 etc.,
+
 ------------------------------------------------------------------------------------------------------------------------
