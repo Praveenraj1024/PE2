@@ -1,22 +1,21 @@
 package com.stackroute.practiceexercise2;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class StudentGradesTest {
 
     StudentGrades studentGrades;
-    @BeforeClass
-    public void setUp () {
+
+    @Before
+    public  void setUp () {
 //      This method runs even before the test cases and initialize the
 //      variable with required value.
         studentGrades = new StudentGrades();
     }
 
-    @AfterClass
+    @After
     public void tearDown() {
 //      This method runs after the all test cases are executed and clears the
 //      initialization of the variable
@@ -29,9 +28,9 @@ public class StudentGradesTest {
         To Test the averageCalculator() method from StudentGrades whether it
         is returning the expected average of given input array.
          */
-        int[] grades = {70, 80, 90, 60, 100};
+       int[] grades = {70, 80, 90, 60, 100};
         studentGrades.initializer(grades);
-        assertEquals(80, studentGrades.averageCalculator());
+        assertEquals(80, studentGrades.averageCalculator(grades),0);
     }
 
     @Test
@@ -42,7 +41,7 @@ public class StudentGradesTest {
          */
         int[] grades = {70, 80, -90, 60, 100};
         studentGrades.initializer(grades);
-        assertEquals(-90, studentGrades.minimumGradeCalculator());
+        assertEquals(-90, studentGrades.minimumGradeCalculator(grades),0);
     }
 
     @Test
@@ -53,7 +52,7 @@ public class StudentGradesTest {
          */
         int[] grades = {70, 80, 90, 60, -100};
         studentGrades.initializer(grades);
-        assertEquals(90, studentGrades.maximumGradeCalculator());
+        assertEquals(90, studentGrades.maximumGradeCalculator(grades),0);
     }
 
     @Test(expected = NullPointerException.class)
@@ -62,7 +61,7 @@ public class StudentGradesTest {
         To Test the averageCalculator() method from StudentGrades whether it
         is returning the Null Pointer Exception if we pass null as a value to it.
          */
-        studentGrades.averageCalculator(null);
+       studentGrades.averageCalculator(null);
     }
 
 }
