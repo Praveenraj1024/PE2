@@ -36,7 +36,7 @@ public class EvenNumTestTest {
         To Test the isEven() method from EvenNumTest class whether it is
         returning an Invalid Parameter exception if we pass character to it.
          */
-        EvenNumTest.isEven('5');
+        EvenNumTest.isEven(' ');
     }
 
     @Test(expected = InvalidParameterException.class)
@@ -45,7 +45,7 @@ public class EvenNumTestTest {
         To Test the isEven() method from EvenNumTest class whether it is
         returning an Invalid Parameter Exception if we pass String to it.
          */
-        EvenNumTest.isEven(" ");
+        EvenNumTest.isEven(Integer.parseInt("rttd"));
     }
 
     @Test(expected = NullPointerException.class)
@@ -54,7 +54,8 @@ public class EvenNumTestTest {
     returning an Null Pointer Exception if we pass null to it.
      */
     public void givenCharacterShouldReturnNullPointerException() {
-        EvenNumTest.isEven(null);
-    }
+        //act
+        EvenNumTest.isEven(Integer.parseInt(null));
 
+    }
 }
